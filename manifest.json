@@ -1,21 +1,21 @@
 {
     "manifest_version": 3,
     "type": "extension",
-    "name": "插件模板",
-    "slug": "plugin_template",
-    "description": "LiteLoaderQQNT的插件模板",
-    "version": "0.1.0",
-    "thumbnail": "./icon.png",
+    "name": "同用户消息连续显示",
+    "slug": "message_show",
+    "description": "同时段同一个人连续发送的消息将连续显示",
+    "version": "1.0",
+    "thumbnail": "./icon.jpg",
     "author": {
-        "name": "沫烬染",
-        "link": "https://github.com/mo-jinran"
+        "name": "恨别鸟惊心_",
+        "link": "https://github.com/ImZjm"
     },
     "repository": {
-        "repo": "LiteLoaderQQNT-Plugin-Template",
+        "repo": "ImZjm/LiteLoaderQQNT-Message-Show",
         "branch": "main",
         "use_release": {
             "tag": "latest",
-            "name": "Plugin-Template.zip"
+            "name": "LiteLoaderQQNT-Message-Show.zip"
         }
     },
     "platform": [
