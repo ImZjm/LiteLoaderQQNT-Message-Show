@@ -103,9 +103,37 @@ function observeElement(selector, callback, callbackEnable = true, interval = 10
     }, interval);
 }
 
+function msgSelfToLeft() {
+    const style = document.createElement('style');
+    style.textContent = `
+    .message-container--align-right{
+        grid-template-areas:
+            "checkbox avatar . nickname nickname nickname"
+            "checkbox avatar . content status ."
+            "checkbox avatar . tips tips tips" !important;
+        grid-template-columns: auto var(--avatar_size_2) 8px auto calc(var(--avatar_size_2) + 8px) 1fr !important;
+        justify-content: start !important;
+        justify-items: start !important;
+    }
+    
+    .message-container--align-right .user-name{
+        padding: 0 calc(var(--avatar_size_2) + 8px) 0 0 !important;
+    }
+    
+    .message-container .user-name--selfRole {
+        flex-direction: initial !important;
+    }
+    `;
+
+    document.head.appendChild(style);
+
+}
+
 // 页面加载完成时触发
 function onLoad() {
     observeElement('#ml-root .ml-list', concatBubble);
+
+    msgSelfToLeft();
 }
 
 
@@ -117,6 +145,5 @@ function onConfigView(view) {
 
 // 这两个函数都是可选的
 export {
-    onLoad,
-    onConfigView
+    onLoad
 }
