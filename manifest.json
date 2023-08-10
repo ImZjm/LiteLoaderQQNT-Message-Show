@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
     "type": "extension",
-    "name": "同用户消息连续显示",
+    "name": "消息靠左连续展示",
     "slug": "message_show",
-    "description": "同时段同一个人连续发送的消息将连续显示",
+    "description": "类似QQ频道内的消息展示结构, 所有消息在左侧连续展示",
     "version": "1.0",
     "thumbnail": "./res/icon.jpg",
     "author": {
