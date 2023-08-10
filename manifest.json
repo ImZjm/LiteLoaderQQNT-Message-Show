@@ -5,7 +5,7 @@
     "slug": "message_show",
     "description": "同时段同一个人连续发送的消息将连续显示",
     "version": "1.0",
-    "thumbnail": "./icon.jpg",
+    "thumbnail": "./res/icon.jpg",
     "author": {
         "name": "恨别鸟惊心_",
         "link": "https://github.com/ImZjm"
