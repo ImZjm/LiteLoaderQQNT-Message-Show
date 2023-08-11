@@ -104,27 +104,36 @@ function observeElement(selector, callback, callbackEnable = true, interval = 10
 }
 
 function msgSelfToLeft() {
+    const msgList = document.querySelector('#ml-root .ml-list');
+    if(!msgList) {
+        return;
+    }
+
+    const msgListObserver = new MutationObserver(async () => {
+        //干掉 消息右对齐
+        const rightMsgs = msgList.querySelectorAll('.message-container--align-right');
+        rightMsgs.forEach(rightMsg => {
+            rightMsg.classList.remove('message-container--align-right');
+        });
+    });
+    msgListObserver.observe(msgList, {childList: true});
+}
+
+
+function addCss() {
     const style = document.createElement('style');
     style.textContent = `
-    .message-container--align-right{
-        grid-template-areas:
-            "checkbox avatar . nickname nickname nickname"
-            "checkbox avatar . content status ."
-            "checkbox avatar . tips tips tips" !important;
-        grid-template-columns: auto var(--avatar_size_2) 8px auto calc(var(--avatar_size_2) + 8px) 1fr !important;
-        justify-content: start !important;
-        justify-items: start !important;
-    }
-    
-    .message-container--align-right .user-name{
-        padding: 0 calc(var(--avatar_size_2) + 8px) 0 0 !important;
-    }
-    
+    /* 重置自己昵称布局 */
     .message-container .user-name--selfRole {
         flex-direction: initial !important;
     }
-    `;
 
+    /* 消息的内容主体保持显示在前 */
+    .message-container--self .container--self {
+        order: -1;
+    }
+    `;
+    
     document.head.appendChild(style);
 
 }
@@ -133,7 +142,8 @@ function msgSelfToLeft() {
 function onLoad() {
     observeElement('#ml-root .ml-list', concatBubble);
 
-    msgSelfToLeft();
+    observeElement('#ml-root .ml-list', msgSelfToLeft);
+    addCss();
 }
 
 
