@@ -84,7 +84,7 @@ function concatBubble() {
     }
 }
 
-function observeElement(selector, callback, callbackEnable = true, interval = 100, timeout = 5000) {
+function observeElement(selector, callback, callbackEnable = true, interval = 100, timeout = 600000) {
     let elapsedTime = 0;
     const timer = setInterval(function () {
         const element = document.querySelector(selector);
