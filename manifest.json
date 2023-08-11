@@ -12,11 +12,7 @@
     },
     "repository": {
         "repo": "ImZjm/LiteLoaderQQNT-Message-Show",
-        "branch": "main",
-        "use_release": {
-            "tag": "latest",
-            "name": "LiteLoaderQQNT-Message-Show.zip"
-        }
+        "branch": "main"
     },
     "platform": [
         "win32",
