@@ -137,6 +137,9 @@ function addCss() {
     .message-content-time {
         margin-left: 4px;
     }
+    .hover-show:hover .message-content-time {
+        margin-left: 4px !important;
+    }
     `;
     
     document.head.appendChild(style);
