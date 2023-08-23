@@ -132,6 +132,11 @@ function addCss() {
     .message-container--self .container--self {
         order: -1;
     }
+
+    /* 轻工具箱，时间显示 边距 重置 */
+    .message-content-time {
+        margin-left: 4px;
+    }
     `;
     
     document.head.appendChild(style);

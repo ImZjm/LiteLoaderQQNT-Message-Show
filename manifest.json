@@ -4,7 +4,7 @@
     "name": "消息靠左连续展示",
     "slug": "message_show",
     "description": "类似QQ频道内的消息展示结构, 所有消息在左侧连续展示",
-    "version": "1.1",
+    "version": "1.2",
     "thumbnail": "./res/icon.jpg",
     "author": {
         "name": "恨别鸟惊心_",
