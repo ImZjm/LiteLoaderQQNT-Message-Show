@@ -129,7 +129,7 @@ function addCss() {
     }
 
     /* 消息的内容主体保持显示在前 */
-    .message-container--self .container--self {
+    .message-container--self .container--self, .message-container--self .file-message--content {
         order: -1;
     }
 
