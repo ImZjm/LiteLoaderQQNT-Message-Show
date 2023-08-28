@@ -129,8 +129,9 @@ function addCss() {
     }
 
     /* 消息的内容主体保持显示在前 */
-    .message-container--self .container--self, .message-container--self .file-message--content {
-        order: -1;
+    /* 轻工具箱 时间 显示在右侧 */
+    .message-content-time {
+        order: 1
     }
 
     /* 轻工具箱，时间显示 边距 重置 */
